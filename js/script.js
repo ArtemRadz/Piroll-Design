@@ -11,29 +11,17 @@ mobMenuClose.addEventListener('click', () => {
 	document.body.style.overflow = "";
 })
 
-let mobMenuListUlA = document.querySelectorAll(".mob-menu-list-ul .mob-menu-list-ul-top");
-
-for (let i = 0; i < mobMenuListUlA.length; i++) {
-	mobMenuListUlA[i].addEventListener('click', function() {
-		for (let i = 0; i < mobMenuListUlA.length; i++) {
-			mobMenuListUlA[i].classList.add("hide");
-		}
-		let innerA = this.nextElementSibling.querySelectorAll('a');
-		for (let i = 0; i < innerA.length; i++) {
-			innerA[i].classList.add("show");
-		}
-	});
-}
-
-let mobMenuListUlBack = document.querySelectorAll(".mob-menu-list-ul-back");
-for (let i = 0; i < mobMenuListUlBack.length; i++) {
-	mobMenuListUlBack[i].addEventListener('click', () => {
-		var parentUlA = mobMenuListUlBack[i].parentNode.parentNode.querySelectorAll('a');
-		for (let i = 0; i < parentUlA.length; i++) {
-			parentUlA[i].classList.remove('show');
-		}
-		for (let i = 0; i < mobMenuListUlA.length; i++) {
-			mobMenuListUlA[i].classList.remove("hide");
-		}
-	});
-}
+let mobMenuListUlA = document.querySelector(".mob-menu-list-ul");
+mobMenuListUlA.addEventListener('click', function(e) {
+	e.preventDefault();
+	let elementTopMenu = e.target.classList.contains("mob-menu-list-ul-top");
+	let back = e.target.classList.contains("mob-menu-list-ul-back");
+	if(elementTopMenu) {
+		this.classList.add("mob-menu-hide");
+		e.target.nextElementSibling.classList.remove("mob-menu-inner-hide");
+	}
+	if(back) {
+		this.classList.remove("mob-menu-hide");
+		e.target.closest('ul').classList.add('mob-menu-inner-hide');
+	}
+});
