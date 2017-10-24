@@ -7,6 +7,8 @@
 	<title>Home Page</title>
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="support-libraries/photo-swipe/photoswipe.css">
+	<link rel="stylesheet" type="text/css" href="support-libraries/photo-swipe/default-skin.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/screen.css">
 </head>
@@ -278,7 +280,45 @@
 			</div>
 		</div>
 	</footer>
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="pswp__bg"></div>
+	    <div class="pswp__scroll-wrap">
+	        <div class="pswp__container">
+	            <div class="pswp__item"></div>
+	            <div class="pswp__item"></div>
+	            <div class="pswp__item"></div>
+	        </div>
+	        <div class="pswp__ui pswp__ui--hidden">
+	            <div class="pswp__top-bar">
+	                <div class="pswp__counter"></div>
+	                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+	                <button class="pswp__button pswp__button--share" title="Share"></button>
+	                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+	                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+	                <div class="pswp__preloader">
+	                    <div class="pswp__preloader__icn">
+	                      <div class="pswp__preloader__cut">
+	                        <div class="pswp__preloader__donut"></div>
+	                      </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+	                <div class="pswp__share-tooltip"></div> 
+	            </div>
+	            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+	            </button>
+	            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+	            </button>
+	            <div class="pswp__caption">
+	                <div class="pswp__caption__center"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 	<script src="https://cdn.polyfill.io/v2/polyfill.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="support-libraries/photo-swipe/photoswipe.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="support-libraries/photo-swipe/photoswipe-ui-default.min.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="js/script.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

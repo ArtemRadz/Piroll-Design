@@ -49,6 +49,23 @@ $hoverLink: #10c9c3;
 	}
 }
 
+.hello-slide {
+  width: 100%;
+  max-width: 400px;
+  color: #FFF;
+  margin: 120px auto 0;
+  text-align: center;
+  
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  
+}
+h1 {
+  font-weight: normal;
+}
+.hello-slide a {
+  color: #B5AEF7 !important;
+}
+
 /*Main style*/
 *, ::after, ::before {
 	-webkit-box-sizing: border-box;
@@ -62,7 +79,7 @@ $hoverLink: #10c9c3;
 }
 .wrapper {
 	max-width: 1200px;
-	margin: auto 0;
+	margin: auto;
 	padding: 0 15px;
 }
 img {
